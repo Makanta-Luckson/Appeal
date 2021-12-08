@@ -1,0 +1,26 @@
+{
+  "name": "appeal",
+  "version": "1.0.0",
+  "description": "Online Course Failed Appealing System",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Makanta-Luckson/Appeal.git"
+  },
+  "author": "Mwamba Kapembwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Makanta-Luckson/Appeal/issues"
+  },
+  "homepage": "https://github.com/Makanta-Luckson/Appeal#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^6.1.0",
+    "nodemon": "^2.0.15"
+  }
+}
