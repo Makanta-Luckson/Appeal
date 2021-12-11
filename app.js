@@ -1,13 +1,33 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const database = require('./database/connection');
 const app = express();
 
 
+//database connection
+mongoose.connect(database)
+.then(() => console.log('database connected'))
+.catch(err => console.log(err));
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log('Listening on port 3000');
-});
+//setting up a view engine
+app.set('view engine', 'ejs');
+
+//setting up the handle-bar
+app.use(express.urlencoded({extended : true}));
 
 
-//setting up routes
+
+//routing
 app.use('/', require('./routes/index'));
-app.use('/users',require('./routes/user'));
+app.use('/user', require('./routes/user'));
+
+
+
+
+
+
+
+
+app.listen(process.env.PORT || 3000, () =>{
+    console.log('Server running');
+});
